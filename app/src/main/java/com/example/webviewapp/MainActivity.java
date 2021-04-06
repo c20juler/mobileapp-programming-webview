@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -15,7 +16,8 @@ import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    //Private members
+    private WebView myWebView;
 
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
@@ -32,15 +34,18 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        //lägger till ett webview-element...
-        WebView webView = new WebView(this);
-        setContentView(webView);
+        WebView myWebView = (WebView) findViewById(R.id.my_webview);
+
+        //kan rendrera webbinnehåll
+        WebViewClient myWebViewClient = new WebViewClient();
+        myWebView.setWebViewClient(myWebViewClient);
 
         //Laddat en sida i WebView
-        webView.loadUrl("https://schio.his.se");
+        myWebView.loadUrl("https://his.se");
 
 
         /*
+        * Rename app...
         * Enable Internet access for your App. Tip: Manifest
         * Create a WebView element in the layout file content_main.xml
         * Give the WebView element ID "my_webview"
