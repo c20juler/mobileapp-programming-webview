@@ -22,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
+        myWebView.loadUrl("https://www.his.se/");
     }
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
+        myWebView.loadUrl("https://dugga.iit.his.se/DuggaSys/courseed.php");
     }
 
     @Override
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //Instantiated private member variable 'myWebView'
-        WebView myWebView = findViewById(R.id.my_webview);
+        myWebView = (WebView) findViewById(R.id.my_webview);
 
         //Enabled Javascript in webclient
         WebSettings webSettings = myWebView.getSettings();
@@ -62,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
         * CHECK Create a new WebViewClient to attach to our WebView. This allows us to
           browse the web inside our app.
         -- CHECK Commit and push to your github fork
-        * Enable Javascript execution in your WebViewClient
-        * Enter the url to load in our WebView
+        * CHECK Enable Javascript execution in your WebViewClient
+        *YOU ARE HERE?! Enter the url to load in our WebView
         -- Commit and push to your github fork
         * Move the code that loads a URL into your WebView into the two methods
           "showExternalWebPage()" and "showInternalWebPage()".
@@ -74,6 +76,16 @@ public class MainActivity extends AppCompatActivity {
         * Take two screenshots using the "Take a screenshot" tool in the AVD
            showing your App. One (1) screenshot showing your internal web page and
            one (1) screenshot showing your external web page.
+           *
+
+        //HAVE YOU DONE THESE CORRECTLY/FULLY COMPLETED?:
+        * ??? findViewById??? - Locate the WebView element created in step 1 using the ID created in step 2
+        * YOU ARE HERE?! Enter the url to load in our WebView
+        * Move the code that loads a URL into your WebView into the two methods
+          "showExternalWebPage()" and "showInternalWebPage()".
+        * Call the "showExternalWebPage()" / "showInternalWebPage()" methods
+          when you select menu options "External Web Page" or "Internal Web Page"
+          respectively
         */
     }
 
@@ -93,11 +105,13 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
+            showExternalWebPage();
             Log.d("==>","Will display external web page");
             return true;
         }
 
         if (id == R.id.action_internal_web) {
+            showInternalWebPage();
             Log.d("==>","Will display internal web page");
             return true;
         }
