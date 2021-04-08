@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
+        Log.d("==>", "Appen har startat.");
+
         //Kan rendera webbinnehåll
         WebViewClient myWebViewClient = new WebViewClient();
         myWebView.setWebViewClient(myWebViewClient);
@@ -60,19 +62,19 @@ public class MainActivity extends AppCompatActivity {
         * CHECK Give the WebView element ID "my_webview"
         -- CHECK Commit and push to your github fork
         * CHECK Create a private member variable called "myWebView" of type WebView
-        * ??? findViewById??? - Locate the WebView element created in step 1 using the ID created in step 2
+        * CHECK - Locate the WebView element created in step 1 using the ID created in step 2
         * CHECK Create a new WebViewClient to attach to our WebView. This allows us to
           browse the web inside our app.
         -- CHECK Commit and push to your github fork
         * CHECK Enable Javascript execution in your WebViewClient
-        *YOU ARE HERE?! Enter the url to load in our WebView
-        -- Commit and push to your github fork
-        * Move the code that loads a URL into your WebView into the two methods
+        *CHECK Enter the url to load in our WebView
+        -- CHECK Commit and push to your github fork
+        * CHECK Move the code that loads a URL into your WebView into the two methods
           "showExternalWebPage()" and "showInternalWebPage()".
-        * Call the "showExternalWebPage()" / "showInternalWebPage()" methods
+        *CHECK Call the "showExternalWebPage()" / "showInternalWebPage()" methods
           when you select menu options "External Web Page" or "Internal Web Page"
           respectively
-        -- Commit and push to your github fork
+        -- CHECK Commit and push to your github fork
         * Take two screenshots using the "Take a screenshot" tool in the AVD
            showing your App. One (1) screenshot showing your internal web page and
            one (1) screenshot showing your external web page.
