@@ -88,6 +88,6 @@ Screenshots av internal och external pages i appen:
 
 Bilder läggs i samma mapp som markdown-filen.
 
-![](app/src/main/assets/img/Screenshot_1617881225.png)
-![](app/src/main/assets/img/Screenshot_1617881222.png)
+![](Screenshot_1617881222.png)
+![](Screenshot_1617881225.png)
 
