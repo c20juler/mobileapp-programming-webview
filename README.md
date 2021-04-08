@@ -86,8 +86,6 @@ För att dessa funktioner ska kallas så läggs de i respektive if satser i
 
 Screenshots av internal och external pages i appen:
 
-Bilder läggs i samma mapp som markdown-filen.
-
 ![Internal webpage screenshot](/Screenshot_1617881225.png)
 ![External webpage screenshot](/Screenshot_1617881222.png)
 
