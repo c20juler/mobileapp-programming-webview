@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
-        myWebView.loadUrl("https://dugga.iit.his.se/DuggaSys/courseed.php");
+        myWebView.loadUrl("file:///android_asset/internalwebpage.html");
     }
 
     @Override
@@ -40,18 +40,15 @@ public class MainActivity extends AppCompatActivity {
         //Instantiated private member variable 'myWebView'
         myWebView = (WebView) findViewById(R.id.my_webview);
 
+        //Kan rendera webbinnehåll
+        WebViewClient myWebViewClient = new WebViewClient();
+        myWebView.setWebViewClient(myWebViewClient);
+
         //Enabled Javascript in webclient
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
         Log.d("==>", "Appen har startat.");
-
-        //Kan rendera webbinnehåll
-        WebViewClient myWebViewClient = new WebViewClient();
-        myWebView.setWebViewClient(myWebViewClient);
-
-        //Laddat en sida i WebView
-        myWebView.loadUrl("https://his.se");
 
 
 
@@ -78,17 +75,17 @@ public class MainActivity extends AppCompatActivity {
         * Take two screenshots using the "Take a screenshot" tool in the AVD
            showing your App. One (1) screenshot showing your internal web page and
            one (1) screenshot showing your external web page.
-           *
 
-        //HAVE YOU DONE THESE CORRECTLY/FULLY COMPLETED?:
-        * ??? findViewById??? - Locate the WebView element created in step 1 using the ID created in step 2
-        * YOU ARE HERE?! Enter the url to load in our WebView
-        * Move the code that loads a URL into your WebView into the two methods
-          "showExternalWebPage()" and "showInternalWebPage()".
-        * Call the "showExternalWebPage()" / "showInternalWebPage()" methods
-          when you select menu options "External Web Page" or "Internal Web Page"
-          respectively
         */
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Here's a Snackbar", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
     }
 
     @Override
